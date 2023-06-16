@@ -19,7 +19,7 @@ struct ContentView: View {
             Image(systemName: "pencil")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Add Pencil")
+            Text("Pencil")
             Spacer()
         }
         .padding()
