@@ -16,6 +16,7 @@
 		F167FE2E2A4F97E30003830D /* MyAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F167FE2D2A4F97E30003830D /* MyAppViewModel.swift */; };
 		F167FE302A4F9AAD0003830D /* NewFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F167FE2F2A4F9AAD0003830D /* NewFolderView.swift */; };
 		F1EA9A902A5339AB00DCAFE2 /* SecondPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9A8F2A5339AB00DCAFE2 /* SecondPartView.swift */; };
+		F1EA9A922A538A5B00DCAFE2 /* NewFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9A912A538A5B00DCAFE2 /* NewFileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F167FE2F2A4F9AAD0003830D /* NewFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderView.swift; sourceTree = "<group>"; };
 		F167FE312A4FAA620003830D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F1EA9A8F2A5339AB00DCAFE2 /* SecondPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPartView.swift; sourceTree = "<group>"; };
+		F1EA9A912A538A5B00DCAFE2 /* NewFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				F167FE2B2A4F96180003830D /* MyAppFileManager.swift */,
 				F167FE2F2A4F9AAD0003830D /* NewFolderView.swift */,
 				F1EA9A8F2A5339AB00DCAFE2 /* SecondPartView.swift */,
+				F1EA9A912A538A5B00DCAFE2 /* NewFileView.swift */,
 				F167FE1F2A4F91870003830D /* Assets.xcassets */,
 				F167FE212A4F91870003830D /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F167FE1E2A4F91860003830D /* MainContentView.swift in Sources */,
+				F1EA9A922A538A5B00DCAFE2 /* NewFileView.swift in Sources */,
 				F167FE302A4F9AAD0003830D /* NewFolderView.swift in Sources */,
 				F167FE2A2A4F93740003830D /* MyAppModel.swift in Sources */,
 				F1EA9A902A5339AB00DCAFE2 /* SecondPartView.swift in Sources */,

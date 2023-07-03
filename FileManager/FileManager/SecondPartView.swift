@@ -15,7 +15,7 @@ struct SecondPartView: View {
         List {
             Section {
                 NavigationLink("Create New File") {
-                    //
+                    NewFileView(myAppViewModel: myAppViewModel)
                 }
             } header: {
                 Text("Create New File")
