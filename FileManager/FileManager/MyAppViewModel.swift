@@ -42,6 +42,7 @@ class MyAppViewModel: ObservableObject {
     func deleteItemInDirectory() {
         myAppFileManager.deleteItemInDirectory(addPath: additionPath, myFile: selectedFile)
         cleanSelectedFile()
+        cleanNewFile()
     }
     
     //MARK: Clean New File
@@ -54,5 +55,18 @@ class MyAppViewModel: ObservableObject {
         selectedFile = MyFile(fileName: "", fileExtension: "", textForFile: "", image: nil, typeOfFile: "")
     }
     
+    //MARK: Create New File
+    func createNewFile() {
+        myAppFileManager.createNewFile(addPath: additionPath, myFile: newFile)
+    }
+    
+    //MARK: Is empty MyFile
+    func isEmpty(myFile: MyFile) -> Bool {
+        if myFile.fileName.isEmpty || myFile.fileExtension.isEmpty {
+            return true
+        } else {
+            return false
+        }
+    }
     
 }

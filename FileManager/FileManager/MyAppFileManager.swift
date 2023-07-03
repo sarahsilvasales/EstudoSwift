@@ -81,4 +81,16 @@ class MyAppFileManager {
         }
     }
     
+    
+    //MARK: CreateNewFile
+    func createNewFile(addPath: String, myFile: MyFile) {
+        guard let mainURL = takeMainDirectoryURL(addPath: addPath, myFile: myFile) else {
+            return
+        }
+        
+        let path = mainURL.path
+        
+        manager.createFile(atPath: path, contents: nil, attributes: nil)
+    }
+    
 }

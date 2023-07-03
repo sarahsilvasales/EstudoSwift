@@ -21,6 +21,13 @@ struct MainContentView: View {
                 } header: {
                     Text("Part #1. Create and Delete New Folder")
                 }
+                Section {
+                    NavigationLink("Part #2") {
+                        SecondPartView(myAppViewModel: myAppViewModel)
+                    }
+                } header: {
+                    Text("Part #2")
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("File Manager and SwiftUI")
