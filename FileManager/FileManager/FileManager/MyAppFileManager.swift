@@ -131,4 +131,42 @@ class MyAppFileManager {
 //        return "Error"
     }
     
+    
+    //MARK: Save JSON Object
+    func saveJSONObject(addPath: String, myFile: MyFile, appContent: [Laptop]) {
+        guard let mainURL = takeMainDirectoryURL(addPath: addPath, myFile: myFile) else {
+            return
+        }
+        
+        let path = mainURL.path
+        
+        do {
+            let encodedData = try JSONEncoder().encode(appContent)
+            manager.createFile(atPath: path, contents: encodedData)
+        } catch let error {
+            print("Error Description: \(error.localizedDescription)")
+        }
+    }
+    
+    //MARK: Take Back JSON File
+    func takeBackJSONObject(addPath: String, myFile: MyFile) -> [Laptop] {
+        guard let mainURL = takeMainDirectoryURL(addPath: addPath, myFile: myFile) else {
+            return [Laptop]()
+        }
+        
+        let path = mainURL.path
+        
+        if manager.fileExists(atPath: path) {
+            do {
+                let jsonData = try Data(contentsOf: mainURL)
+                
+                let laptopList = try JSONDecoder().decode([Laptop].self, from: jsonData)
+                return laptopList
+            } catch let error {
+                print("Error Description: \(error.localizedDescription)")
+            }
+        }
+        
+        return [Laptop]()
+    }
 }

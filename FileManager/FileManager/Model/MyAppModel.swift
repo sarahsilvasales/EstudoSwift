@@ -33,6 +33,21 @@ struct MyFile {
     }
 }
 
+struct Laptop: Codable {
+    var id: UUID
+    var name: String
+    var releaseData: String
+    var color: String
+    
+    init(id: UUID = UUID(), name: String, releaseData: String, color: String) {
+        self.id = id
+        self.name = name
+        self.releaseData = releaseData
+        self.color = color
+    }
+}
+
+
 extension UIImage {
     var typeIdentifier: String? {
         cgImage?.utType as String?

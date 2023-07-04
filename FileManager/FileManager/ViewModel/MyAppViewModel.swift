@@ -12,19 +12,25 @@ class MyAppViewModel: ObservableObject {
     @Published var newFile: MyFile
     @Published var selectedFile: MyFile
     @Published var additionPath: String
+    @Published var newLaptop: Laptop
+    @Published var allLaptop: [Laptop]
     
     let myAppFileManager = MyAppFileManager()
     
-    init(newFile: MyFile, selectedFile: MyFile, additionPath: String) {
+    init(newFile: MyFile, selectedFile: MyFile, additionPath: String, newLaptop: Laptop, allLaptop: [Laptop]) {
         self.newFile = newFile
         self.selectedFile = selectedFile
         self.additionPath = additionPath
+        self.newLaptop = newLaptop
+        self.allLaptop = allLaptop
     }
     
     init() {
         newFile = MyFile(fileName: "", fileExtension: "", textForFile: "", image: nil, typeOfFile: "")
         selectedFile = MyFile(fileName: "", fileExtension: "", textForFile: "", image: nil, typeOfFile: "")
         additionPath = ""
+        newLaptop = Laptop(name: "", releaseData: "", color: "")
+        allLaptop = [Laptop]()
     }
     
     //MARK: Print Main Directory
