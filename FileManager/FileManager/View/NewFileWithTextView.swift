@@ -41,6 +41,14 @@ struct NewFileWithTextView: View {
             .disabled(myAppViewModel.isEmpty(myFile: myAppViewModel.newFile))
             
             Section {
+                TextField("File Name", text: $myAppViewModel.selectedFile.fileName)
+                TextField("File Extension", text: $myAppViewModel.selectedFile.fileExtension)
+            } header: {
+                Text("Section for delete file")
+            }
+            .autocapitalization(.none)
+            
+            Section {
                 Button(role: .destructive) {
                     myAppViewModel.deleteItemInDirectory()
                 } label: {
