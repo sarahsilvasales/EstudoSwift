@@ -93,4 +93,42 @@ class MyAppFileManager {
         manager.createFile(atPath: path, contents: nil, attributes: nil)
     }
     
+    //MARK: Create New File with Text
+    func createNewFileWithText(addPath: String, myFile: MyFile) {
+        guard let mainURL = takeMainDirectoryURL(addPath: addPath, myFile: myFile) else {
+            return
+        }
+        
+        let path = mainURL.path
+        
+        guard let contentData = myFile.textForFile.data(using: .utf8) else {
+            return
+        }
+        
+        manager.createFile(atPath: path, contents: contentData)
+    }
+    
+    //MARK: Take File with Text
+    func takeFileWithText(addPath: String, myFile: MyFile) -> String {
+        guard let mainURL = takeMainDirectoryURL(addPath: addPath, myFile: myFile) else {
+            return ""
+        }
+        
+        let path = mainURL.path
+        
+        if manager.fileExists(atPath: path) {
+            do {
+                let text = try String(contentsOf: mainURL)
+                return text
+            } catch let error {
+                print("Error Description: \(error.localizedDescription)")
+                return "Error"
+            }
+        } else {
+            return "File don't exists"
+        }
+        
+//        return "Error"
+    }
+    
 }

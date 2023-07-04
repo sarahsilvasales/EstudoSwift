@@ -13,6 +13,7 @@ struct SecondPartView: View {
     
     var body: some View {
         List {
+            //section
             Section {
                 NavigationLink("Create New File") {
                     NewFileView(myAppViewModel: myAppViewModel)
@@ -20,6 +21,17 @@ struct SecondPartView: View {
             } header: {
                 Text("Create New File")
             }
+            
+            //section
+            Section {
+                NavigationLink("Create new file with text") {
+                    NewFileWithTextView(myAppViewModel: myAppViewModel)
+                }
+            } header: {
+                Text("Create new file with text")
+            }
+            
+            
         }.navigationTitle("File Manager &SwiftUI Second Part")
     }
 }

@@ -69,4 +69,16 @@ class MyAppViewModel: ObservableObject {
         }
     }
     
+    //MARK: Create New File with Text
+    func createNewFileWithText() {
+        myAppFileManager.createNewFileWithText(addPath: additionPath, myFile: newFile)
+        cleanNewFile()
+    }
+    
+    //MARK: Take File with Text
+    func takeFileWithText() {
+        newFile.textForFile = myAppFileManager.takeFileWithText(addPath: additionPath, myFile: newFile)
+    }
+    
+    
 }
